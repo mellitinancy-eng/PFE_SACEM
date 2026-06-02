@@ -1,0 +1,9 @@
+*.xlsx
+*.csv
+*.sql
+*.zip
+*.pbix
+
+__pycache__/
+Logs/
+Captures/
