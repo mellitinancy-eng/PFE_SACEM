@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+*.xlsx
+*.csv
+*.sql
+
+.env
+
+Logs/
+Captures/
+
+backup_sacem.sql

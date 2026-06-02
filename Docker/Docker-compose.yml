@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+
+  postgres:
+    image: postgres:15
+    container_name: sacem_postgres
+
+    environment:
+      POSTGRES_DB: sacem_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: azerty
+
+    ports:
+      - "5434:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  streamlit:
+    build: .
+
+    container_name: sacem_streamlit
+
+    ports:
+      - "8501:8501"
+
+    depends_on:
+      - postgres
+
+    command: streamlit run simulation_app.py --server.address=0.0.0.0
+
+volumes:
+  postgres_data:
