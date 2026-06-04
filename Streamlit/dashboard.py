@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -462,4 +462,4 @@ st.download_button(
     "rapport_performance_sacem.csv",
     "text/csv"
 )
-```
+
